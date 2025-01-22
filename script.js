@@ -1,8 +1,11 @@
+// Event listener for page load
 document.addEventListener('DOMContentLoaded', function() {
+    // Select DOM elements
     const addButton = document.getElementById('add-task-btn');
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
 
+    // Function to add a new task
     function addTask() {
         const taskText = taskInput.value.trim();
         if (taskText === "") {
@@ -25,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
         taskInput.value = '';
     }
 
+    // Attach event listeners
     addButton.addEventListener('click', addTask);
-
     taskInput.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
             addTask();

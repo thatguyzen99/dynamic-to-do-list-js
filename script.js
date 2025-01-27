@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
-        removeButton.className = 'remove-btn';
+        removeButton.classList.add('remove-btn');  // Use classList.add to add a CSS class
         removeButton.onclick = function() {
             taskList.removeChild(li);
             tasks = tasks.filter(task => task !== taskText);
